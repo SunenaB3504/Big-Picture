@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KnowledgeCompass</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Add Babel Standalone for in-browser JSX/TSX transpilation -->
-    <script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js"></script>
+    <!-- Tailwind CSS is included via index.css built by Vite/PostCSS -->
     <style>
         .custom-scrollbar::-webkit-scrollbar {
             width: 8px;
@@ -33,16 +31,11 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+<link rel="stylesheet" href="/Big-Picture/index.css">
 </head>
 <body class="bg-gray-900">
     <div id="root"></div>
-    <script>
-      console.log('DEBUG: index.html: Body loaded. Root element is available.');
-      console.log('DEBUG: index.html: Attempting to load Babel script: ./index.tsx');
-    </script>
-    <!-- Update script type to be processed by Babel -->
-    <script type="text/babel" data-type="module" src="./index.tsx"></script>
-<script type="module" src="/index.tsx"></script>
+    <!-- Scripts are built and injected by Vite. -->
+    <script type="module" src="/index.tsx"></script>
 </body>
 </html>
